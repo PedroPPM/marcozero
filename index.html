@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/icon.png">
+    <title>Marco Zero</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="lista " id="meuCard">
+            <ul>
+                <li>1. Entrar na Loja</li>
+                <li>2. Adicionar Produtos</li>
+                <li>3. Criar Coleções e Adicionar Tag</li>
+            
+                <li>
+                    <div class="card">
+                    <p id="colecoes-01">Melhores Promoções</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('colecoes-01')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                </li>
+                <li>
+                    <div class="card" id="meuCard">
+                    <p id="colecoes-02">Casa e Decoração</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('colecoes-02')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                    <p id="colecoes-03">Beleza e Saúde</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('colecoes-03')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                    <p id="colecoes-04">Homem</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('colecoes-04')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                    <p id="colecoes-05">Carro</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('colecoes-05')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                    <p id="colecoes-06">Pets</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('colecoes-06')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                    <p id="colecoes-07">Kids</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('colecoes-07')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                    <p id="colecoes-08">Vestuário</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('colecoes-08')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                    <p id="colecoes-09">Eletrônicos</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('colecoes-09')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                </li>
+                
+                    <li class="py-5">4. Criar Páginas </li>
+        
+                    <div class="card">
+                        <p id="title-page-01">Rastrear Pedido</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('title-page-01')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <p><i>SCRIPT</i></p>
+                        <div class="button">
+                            <button onclick="copiarConteudo('script')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+
+                    <!-- SCRIPT -->
+                    <div class="card card-script" id="script">
+                        <div style="text-align: center;">Preencha o código de rastreio abaixo para conferir o status de seu pedido.</div>
+                        <br />
+                        <div style="text-align: center;"><input type="text" id="YQNum" maxlength="50" /> <input type="button" value="Rastrear" onclick="doTrack()" /></div>
+                        <br />
+                        <div id="YQContainer"></div>
+                        <script type="text/javascript" src="//www.17track.net/externalcall.js"></script>
+                        <script type="text/javascript">// <![CDATA[
+                        function doTrack() {
+                            var num = document.getElementById("YQNum").value;
+                            if(num===""){
+                                alert("Preencha o código de rastreio corretamente."); 
+                                return;
+                            }
+                            YQV5.trackSingle({
+                                YQ_ContainerId:"YQContainer",
+                                YQ_Height:600,
+                                YQ_Fc:"0",
+                                YQ_Lang:"pt",
+                                YQ_Num:num
+                            });
+                        }
+                        // ]]></script>       
+                                    </div>
+
+                    <div class="card">
+                        <p id="page-01">As informações para acompanhamento em tempo real do seu pedido são enviadas por email. Nós garantimos a sua entrega!
+                            <br><br>
+                            Mas se preferir, você pode entrar no site https://www.correios.com.br/ e inserir o seu código de rastreio (enviado no e-mail até 5 dias após a compra)
+                            <br>
+                            Lembre-se que o prazo de entrega varia de 7 a 25 dias úteis.
+                            </p>
+                        <div class="button">
+                            <button onclick="copiarTexto('page-01')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="title-page-02">Compra Segura</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('title-page-02')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="page-02">PRIVACIDADE ABSOLUTA
+                            <br>
+                            Protegemos a informação no trajeto que vai do seu computador, smartphone ou tablet até o nosso servidor. Tornamos isso possível com a técnica de encriptação de dados (TLS) e, assim, cumprimos com os mais altos padrões de segurança online.<br>
+                            Nós utilizamos uma plataforma de pagamento criptografada, por isso, você pode ficar despreocupado, nós não vemos seus dados financeiros. Jamais!<br>
+                            Além disso garantimos que você receberá o que comprou, com toda segurança financeira e com a garantia de um produto de qualidade. 
+                            </p>
+                        <div class="button">
+                            <button onclick="copiarTexto('page-02')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="title-page-03">Contato</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('title-page-03')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="page-03">Temos um Time de Suporte especializado para resolver o seu problema!
+                            Qualquer dúvida ou sugestão, entre em contato pelos canais abaixo:
+                            <br><br>
+                            Email:
+                            <br>
+                            Telefone:
+                            <br><br>
+                            Horário de Atendimento: Segunda a Sexta-feira (9:00-17:00)
+                            </p>
+                        <div class="button">
+                            <button onclick="copiarTexto('page-03')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="title-page-04">Política de Entrega</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('title-page-04')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="page-04">FRETE GRÁTIS para todo o Brasil! Isso quer dizer que entregamos em todos os endereços do Brasil gratuitamente para nossos clientes!<br>
+                            Os produtos apresentados em nossa loja são enviados diretamente de nossos centros de distribuição para o endereço cadastrado em nossa loja no momento da conclusão do pedido. Pode ser que o envio parta de algum centro de distribuição do Brasil ou mesmo do exterior (EUA, Europa, China).<br>
+                            O prazo de entrega é de 07 até 25 dias úteis após a postagem do pedido nos Correios, conforme as regras do sistema de entrega dos correios brasileiro.<br>
+                            O seu pedido será enviado logo após a Confirmação do Pagamento do pedido e após o Processamento Logístico do mesmo.<br>
+                            Cuidados com o preenchimento dos dados:<br>
+                            A (nome da loja) irá garantir que o envio dos produtos seja realizado para o endereço escolhido pelo cliente no momento da compra. Sendo assim, pedimos que o cliente preencha com cuidado o endereço de recebimento do seu produto, para que não haja problemas para a realização da entrega. As informações disponibilizadas no momento do cadastro, são de total responsabilidade do cliente, não cabendo a (Nome da loja) qualquer encargo decorrente à dados cadastrados incorretamente. Caso o produto não seja entregue devido a erro no endereço indicado pelo cliente, só haverá como ser enviado novo produto mediante uma nova compra.<br>
+                            Caso você tenha alguma dúvida sobre o seu pedido ou queira saber mais detalhes sobre o rastreio do pedido, basta nos enviar um e-mail e informar o número do seu pedido, nossa equipe vai analisar o seu pedido e irá te ajudar. Estamos aqui para te ajudar! Nosso e-mail é: (email).
+                            </p>
+                        <div class="button">
+                            <button onclick="copiarTexto('page-04')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="title-page-05">Política de Privacidade</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('title-page-05')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="page-05">TERMOS E CONDIÇÕES GERAIS DE USO DO SITE<br>
+                            Estes Termos e Usos, doravante denominados “Termos e Usos” regulamenta os serviços de intermediação de compra e venda realizados pelo website (loja) doravante denominado “INTERMEDIADOR”.<br>
+                            1) Qualquer pessoa física, doravante denominada “COMPRADOR”, que pretenda utilizar os serviços da (loja), deverá aceitar as Cláusulas de Uso e todas as demais políticas e princípios que as regem.<br>
+                            2) A ACEITAÇÃO DESTES TERMOS E CONDIÇÕES GERAIS É INDISPENSÁVEL À UTILIZAÇÃO DOS SITES E SERVIÇOS PRESTADOS PELA (loja).<br>
+                            3) O USUÁRIO deverá ler, certificar-se de haver entendido e aceitar todas as disposições estabelecidas nos Termos e Condições e na Política de Privacidade, para que então seja efetuado com sucesso seu cadastro como “comprador”.<br>
+                            II – DO COMPRADOR:<br>
+                            4) Os serviços somente estão disponíveis para as pessoas que tenham plena capacidade de fato para contratar. Dessa forma, não podem efetuar cadastro pessoas menores de 18 anos ou acometidas por outras incapacidades inscritas nos artigos 3º e 4º do Código Civil Brasileiro, salvo se devidamente representadas ou assistidas.<br>
+                            5) A (loja) não presta serviços para pessoas jurídicas, limitando-se a realizar serviços de intermediação entre pessoas físicas.<br>
+                            6) O “COMPRADOR”, se compromete a fornecer seus dados pessoais de forma verdadeira e precisa, devendo atualizá-los sempre que ocorrer alguma alteração.<br>
+                            7) A (loja) não se responsabiliza pela veracidade das informações prestadas pelo “COMPRADOR”, sendo dele toda a responsabilidade por seu conteúdo.<br>
+                            8) A (loja) pode checar a veracidade dos dados cadastrais do “COMPRADOR” a qualquer tempo. Caso constate haver entre eles dados incorretos ou inverídicos, ou ainda caso o “COMPRADOR” se furte ou se negue a enviar os documentos requeridos, a (loja) poderá bloquear o “COMPRADOR”, até que a irregularidade seja sanada.<br>
+                            III – DO SERVIÇO PRESTADO:<br>
+                            9) A (loja) é um website que possui o objetivo de intermediar a compra e venda de produtos importados, mediante remuneração por “transação” realizada.<br>
+                            10) A (loja) se limita a realizar transações de importação exclusivamente entre pessoas físicas, não intermediando importação entre pessoa física e jurídica.<br>
+                            11) O serviços disponibilizados pela (loja) serão remunerados através de uma porcentagem em conformidade com o valor da “transação”.<br>
+                            12) A (loja) não é fornecedora de quaisquer produtos ou anunciados no site. A (loja) presta um serviço consistente em levar o “COMPRADOR” ao encontro de produtos e mercadorias do fornecedor, podendo ser produtos nacionais e ou importados.<br>
+                            13) O “INTERMEDIADOR” não poderá ser responsabiliza pelo direito de arrependimento de produtos adquiridos no site (loja), realizando apenas a intermediação entre as partes interessadas.<br>
+                            IV- CAPACIDADE DO COMPRADOR<br>
+                            14) Os serviços prestados pelo “INTERMEDIADOR” estão disponíveis apenas para as pessoas físicas que tenham capacidade legal para contratá-los.<br>
+                            15) O “INTERMEDIADOR” não realiza transações com “COMPRADORES” que não tenham capacidade civil (pessoas físicas), sem prejuízo da aplicação das sanções legais previstas no Código Civil Brasileiro, notadamente, art. 166, I; 171, I e 180.<br>
+                            V- MODIFICAÇÕES DOS TERMOS E CONDIÇÕES GERAIS<br>
+                            16) O “INTERMEDIADOR” poderá alterar, a qualquer tempo, modificar estes Termos e condições gerais, visando seu aprimoramento e melhoria dos serviços prestados. Os novos Termos e condições gerais entrarão em vigor 10 (dez) dias após sua publicação nos Sites. No prazo de 5 (cinco) dias contados a partir da publicação da nova versão, o “COMPRADOR” deverá comunicar-se por e-mail caso não concorde com os termos alterados. Nesse caso, o vínculo contratual deixará de existir. Não havendo manifestação no prazo estipulado, entender-se-á que o Usuário aceitou os novos Termos e condições gerais de uso e o contrato continuará vinculando as partes. As alterações não vigorarão em relação às negociações já iniciadas antes de sua publicação, permanecendo, nestes casos, vigente a redação anterior.<br>
+                            VI- PRODUTOS ANUNCIADOS E LIMITAÇÃO DE RESPONSABILIDADE<br>
+                            17) O “COMPRADOR” declara ter conhecimento de que o “INTERMEDIADOR” não possui em estoque os produtos ofertados, estando os mesmos disponíveis no estoque do “FORNECEDOR”.<br>
+                            18) O “COMPRADOR” compreende e concorda expressamente que, na extensão permitida pelas leis aplicáveis, o “INTERMEDIADOR” não será responsável por nenhum dano direto, indireto, incidental, especial, consequente ou exemplar, incluindo, sem limitação, danos por lucros cessantes, boa vontade, uso , dados ou outras perdas intangíveis resultantes do uso ou da incapacidade de usar o Serviço.<br>
+                            19) Na extensão permitida pelas leis aplicáveis, sob nenhuma circunstância o “INTERMEDIADOR” será responsável por lucros cessantes ou quaisquer danos especiais, incidentais ou consequentes decorrentes ou relacionados ao nosso site, nossos Serviços ou estes Termos de Serviço (seja qual for a origem, inclusive negligência).<br>
+                            20) O “INTERMEDIADOR” não garante que os Serviços serão ininterruptos, oportunos, seguros ou sem erros, não garantindo os resultados que possam eventualmente ser obtidos com o uso dos Serviços sejam precisos ou confiáveis.<br>
+                            21) O “INTERMEDIADOR” não garante a qualidade dos produtos, serviços, informações ou outros materiais comprados ou obtidos pelo “COMPRADOR”. 22) O “INTERMEDIADOR” não realiza reembolsos.<br>
+                            PAGAMENTO DE TAXAS<br>
+                            22) O “COMPRADOR” é o responsável por todos os Impostos aplicáveis decorrentes ou resultantes da compra de produtos. Na extensão da cobrança desses Impostos, são calculadas alíquotas de imposto aplicáveis ao endereço de faturamento informado por você. Esses valores são adicionais às Taxas dos produtos e serviços e serão faturados usando a sua Forma de Pagamento Autorizada.
+                            PRIVACIDADE E PROTEÇÃO DE DADOS<br>
+                            23) A (loja) está firmemente comprometida em proteger a privacidade de suas informações pessoais e das informações pessoais do “COMPRADOR” . Ao usar o Serviço, você reconhece e concorda que a coleta, uso e divulgação dessas informações pessoais pela (loja) é regida pela nossa Política de Privacidade.<br></p>
+                        <div class="button">
+                            <button onclick="copiarTexto('page-05')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="title-page-06">Trocas e Devoluções</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('title-page-06')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="page-06">Você pode solicitar a troca ou devolução de um produto em até 7 dias corridos após o recebimento do mesmo. Precisam ser observadas as seguintes condições:<br>
+                            O produto deve ser devolvido em sua embalagem original;<br>
+                            O produto deve ser devolvido sem indícios de uso ou consumo, isto é, da forma que foi recebido;<br>
+                            O produto deve ser devolvido com etiquetas (ou protetores) afixados, manuais e todos os acessórios que o acompanhem.<br>
+                            Não realizamos trocas de produtos com tamanho inadequado para o cliente: Disponibilizamos as medidas em centímetros de nossos produtos para não haver erro na escolha do tamanho. Conforme é dito no Código de Defesa do Consumidor - Artigo 18, não existe a obrigação legal do lojista de realizar trocas por motivos de arrependimento do consumidor quanto à cor, tamanho, modelo, ou outra qualquer hipótese.<br>
+                            IMPORTANTE: Não aceitaremos devoluções caso as condições acima não sejam respeitadas.<br>
+                            O QUE FAZER PARA SOLICITAR TROCA OU DEVOLUÇÃO<br>
+                            Envie um e-mail para (email da loja) e informe:<br>
+                            Nome do produto;<br>
+                            Número do pedido;<br>
+                            E-mail cadastrado na compra;<br>
+                            Motivo para troca ou devolução;<br>
+                            VÍDEO QUE COMPROVE O DEFEITO<br>
+                            Confirmadas todas as questões acerca da devolução do produto, lhe informaremos o endereço para devolução do produto e lhe ressarciremos o valor pago do produto e do frete.<br>
+                            FORMAS DE RESSARCIMENTO<br>
+                            Estorno no cartão de crédito: este estorno pode aparecer em até duas faturas após a conclusão da devolução pelo gateway de pagamento.<br>
+                            PIX- Transferência para a conta do cliente que pode ser realizada em até 10 dias úteis após a confirmação da devolução.<br>
+                            </p>
+                        <div class="button">
+                            <button onclick="copiarTexto('page-06')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="title-page-07">Quem Somos</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('title-page-07')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <p id="page-07">BEM VINDO, ESTAMOS AGRADECIDOS DE TER NOS ENCONTRADO.<br>
+                            Nós trabalhamos com o intuito de disponibilizar para o mercado nacional, produtos da melhor qualidade e com um preço justo, para isso temos uma equipe especializada e treinada por nossos profissionais.<br>
+                            Nossa loja vem desde 2015,  melhorando e proporcionando experiências cada vez  melhores  aos nossos clientes. Já realizamos mais de 15.000 vendas em todo país e pretendemos futuramente comercializar internacionalmente.<br>
+                            Acreditamos que o atendimento ao cliente vem em primeiro lugar. É por isso que oferecemos somente acessórios de qualidade a preços acessíveis e estaremos disponíveis para responder a qualquer dúvida que você possa ter sobre seus pedidos.<br>
+                            Para garantir a sua segurança durante as compras, utilizamos os padrões mais rigorosos desenvolvidos por nossa equipe, nós contamos com o principal sistema de segurança para a proteção de todos os seus dados:<br>
+                             - Criptografia de ponta a ponta (SSL) - Certificado do Site Blindado;<br>
+                            Através dele, podemos garantir que todos os seus dados pessoais serão excluídos depois de efetuar a compra!
+                            </p>
+                        <div class="button">
+                            <button onclick="copiarTexto('page-07')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                
+                <li class="py-5">5. Criar Menus</li>
+                <div class="card-menu">
+                    <p>Menu principal</p>   
+                </div>
+                <div class="sub-menus">
+                    <p>Início</p>
+                    <p>Catálogo</p>
+                    <p>Entrar em contato</p>
+                    <p>Coleções</p>
+                    <p>Rastrear Pedido</p>
+                </div>
+                <div class="card">
+                    <p id="menu-01">Links Rápidos</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('menu-01')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                    </div>
+                    <div class="sub-menus">
+                        <p>Início</p>
+                        <p>Pesquisar</p>
+                        <p>Ofertas (produtos)</p>
+                        <p>Quem Somos</p>
+                    </div>
+                <div class="card">
+                    <p id="menu-02">Informações</p>
+                        <div class="button">
+                            <button onclick="copiarTexto('menu-02')" class="btn" type="button"><i>Copiar</i></button>
+                        </div>    
+                </div>
+                <div class="sub-menus">
+                    <p>Contato</p>
+                    <p>Rastrear Pedido</p>
+                    <p>Compra Segura</p>
+                    <p>Política de Privacidade</p>
+                    <p>Política de Entrega</p>
+                    <p>Trocas e Devolução</p>
+                </div>
+                <div class="card-rodape">
+                    <li>6. Adicionar Tema</li>
+                    <li>7. Adicionar Logo</li>
+                    <li>8. Adicionar Banners</li>
+                    <li>9. Publicar e Salvar</li>
+                </div>
+            </ul>
+        
+        </div>
+
+            <button id="reset">Resetar</button>
+        </div>
+        <footer>
+            <div class="rodape">
+                <p>Desenvolvido por <a href="https://www.linkedin.com/in/pedro-paulo-0a4798227/">Pedro</a>.</p>
+            </div>
+        </footer>
+        
+    <script src="script/script.js"></script>
+</body>
+
+</html>

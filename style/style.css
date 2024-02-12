@@ -1,0 +1,162 @@
+/* Pagina Inicial */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    margin: auto;
+    max-width: 90%;
+    padding-top: 20px;
+}
+
+#reset{
+    position: fixed;
+    font-size: 16px;
+    padding: 5px;
+    right: 2%;
+    bottom: 2%;
+}
+
+.lista{
+    min-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    font-size: 24px;
+}
+
+.py-5{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Lista */
+
+ul {
+    text-align: left;
+    list-style-type: none;
+}
+
+
+/* cartões */
+
+.card{
+    margin-top: 10px;
+    position: relative;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.card p{
+    padding: 10px;
+    text-align: center;
+}
+
+
+.card.large-text p {
+    height: 100px; /* Altura desejada */
+    width: 100%; /* Largura total */
+    resize: none; /* Impede o redimensionamento do textarea pelo usuário */
+}
+
+.card:hover .button{
+    display: block;
+    opacity: 1;
+}
+
+.card-script{
+    display: none;
+}
+
+.sub-menus{
+    text-align: center;
+}
+
+.card-menu{
+    margin-top: 10px;
+    position: relative;
+    border: 2px solid rgb(0, 71, 0);
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+.card-rodape{
+    padding-top: 50px;
+}
+
+/* botões */
+
+.button{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(163, 255, 163, 0.85);
+}
+
+.button button{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-size: 22px;
+}
+
+.mudar-cor{
+    background-color: rgb(163, 255, 163);
+}
+
+/* RODAPÉ */
+
+footer{
+    width: 100%;
+    margin-top: 100px;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 14px;
+}
+
+.rodape{
+    padding: 20px;
+}
+
+footer a{
+    color: blue;
+    text-decoration: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 768px){
+    body{
+        font-size: 16px;
+    }
+
+    .button button{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .lista{
+        width: 100%;
+    }
+}
