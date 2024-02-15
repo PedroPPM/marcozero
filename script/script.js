@@ -19,11 +19,6 @@ function copiarTexto(idDoTexto) {
     // Remove a seleção
     window.getSelection().removeAllRanges();
 }
-
-
-
-
-
     // Botão de resete
 
     const botaoReset = document.getElementById('reset');
@@ -45,6 +40,17 @@ function copiarTexto(idDoTexto) {
             this.classList.add("mudar-cor");
         });
     });
+
+// Rolagem do botão
+
+function scrollToSection() {
+    const section = document.getElementById('meuCard');
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth' // Adiciona o efeito de rolagem suave
+        });
+    }
+}
 
 
  // JavaScript
