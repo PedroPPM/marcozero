@@ -74,6 +74,13 @@ ul {
     opacity: 1;
 }
 
+.script-width{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .card-script{
     display: none;
 }
